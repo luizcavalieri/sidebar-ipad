@@ -3,6 +3,11 @@ React Exercise
 
 A React Router project for showing products in online market places.
 
+## Live App
+
+You can find this App running on the link below.
+
+https://luizcavalieri.github.io/sidebar-ipad/
 
 ## Installation
 
@@ -40,6 +45,7 @@ http://localhost:3000
 #### Project root 
 
 - public - entry folder where the index.html file is located.
+    - image - images provided by the exercise this is added in the public folder as this is added dynamically to the project. 
 - src - folder containing all the application.
     - assets
         - img - images used on the application.
