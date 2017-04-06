@@ -1,0 +1,158 @@
+@import './variables.scss';
+
+//HEADER COMPONENT
+.header{
+  min-height: $header-height;
+  background: $header-background-dark; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $header-background-bright , $header-background-dark); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $header-background-bright , $header-background-dark); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $header-background-bright , $header-background-dark); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $header-background-bright , $header-background-dark); /* Standard syntax */
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  font-size: $header-font-size;
+  font-weight: $header-font-weight;
+  z-index: 100;
+
+
+  span.text{
+    padding: 20px 0;
+    position: relative;
+    top: 15px;
+    font-family: $font-family;
+    font-size: $header-font-size;
+
+  }
+
+  span.icon{
+    padding: 20px 10px 20px 23px;
+    position: relative;
+    top: 12px;
+  }
+
+  span.icon-arrow{
+    padding: 0px 20px 10px 0;
+    position: relative;
+    bottom: 5px;
+
+    svg{
+      height: 1em;
+      width: 1em;
+    }
+  }
+
+  svg{
+
+    height: 1.4em;
+    width: 1.4em;
+    color: $arrow-icon-color;
+  }
+
+  div.header-right{
+    float: right;
+  }
+
+}
+
+//CONTENT BOX
+div.content{
+  overflow: auto;
+  height: 170px;
+  background-color: #ffffff;
+  font-weight: $text-font-weight;
+  font-size: $text-font-size;
+  font-family: $font-family;
+  padding-top: 10px;
+
+  @media #{$mobile} {
+    height: auto;
+    padding: 20px;
+  }
+
+
+  div.image-container{
+    width: 35%;
+    float: left;
+
+    @media #{$mobile} {
+      width: 80%;
+
+    }
+    img{
+      width: 90%;
+      height: auto;
+      margin: auto;
+
+      @media #{$mobile} {
+        width: 50%;
+
+      }
+
+    }
+  }
+
+  div.text-container{
+    width: 60%;
+    float: left;
+    vertical-align: middle;
+
+    @media #{$mobile} {
+      width: 80%;
+    }
+  }
+
+  div.text-container-full{
+    margin-left: 10%;
+    width: 80%;
+    float: left;
+    vertical-align: middle;
+
+  }
+
+}
+
+
+//NAVIGATION BOX
+nav.navigation{
+  overflow: auto;
+  height: 45px;
+  border-top: 1px solid $nav-border-color;
+  padding-top: 10px;
+  background-color: #ffffff;
+  font-weight: $text-font-weight;
+  font-size: $text-font-size;
+  font-family: $font-family;
+
+  .arrow-left{
+    float:left;
+    margin: 0px 20px ;
+  }
+
+  .arrow-right{
+    float:right;
+    margin: 0px 20px;
+  }
+
+  .next-title{
+    display: inline-block;
+
+    @media #{$sm-mobile} {
+      display: none;
+    }
+  }
+
+  .next-link{
+    display: none;
+
+    @media #{$sm-mobile} {
+      display: inline-block;
+    }
+  }
+
+  svg{
+    width: 3em;
+    height: 3em ;
+    color: $arrow-icon-color;
+  }
+
+}

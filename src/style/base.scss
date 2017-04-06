@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+base
+
+body{
+  font-family: $font-family;
+  font-size: $text-font-size;
+}
+
+a{
+  color: $link-color;
+  font-family: $font-family;
+  font-size: $text-font-size;
+
+  span{
+    text-decoration: underline;
+  }
+}
+
+h1{
+  font-size: $header-font-size;
+  font-family: $font-family;
+}
+
+h4{
+  padding: 20px;
+  font-family: $font-family;
+}
+

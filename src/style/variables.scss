@@ -1,0 +1,42 @@
+
+//Fonts
+$text-font-size: 12px;
+$text-font-weight: 400;
+$header-font-size: 15px;
+$header-font-weight: 700;
+$font-family: Helvetica, sans-serif;
+
+
+//Colors
+$bg-color: #ffffff;
+$text-color: #000000;
+$link-color: #608020;
+
+$arrow-icon-color: #558903;
+
+$nav-border-color: #e6e7df;
+
+$header-background-bright: #ebebd3;
+$header-background-dark: #c7c7a5;
+
+
+
+//Spacing
+$padding-content-text: 20px;
+
+
+//Layout size
+$header-height: 52px;
+$app-width: 725px;
+
+
+//Borders
+$border-radius: 10px;
+
+
+//Measures for responsive
+
+$sm-mobile: "(max-width: 479px)";
+$mobile: "(max-width: 670px)";
+$tablet: "(min-width: 480px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";

@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+
+.app{
+  max-width: $app-width;
+  min-width: 270px;
+  border: 1px solid $nav-border-color;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+  margin: auto;
+  border-radius: $border-radius;
+}
+
+
+
+.Collapsible__contentOuter, .Collapsible{
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
