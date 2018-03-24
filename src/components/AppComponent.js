@@ -19,8 +19,9 @@ import content from "../data/content.json";
 
 export const App = createClass({
 
-        //Initializing the initial state for the app, loading the content.json
-        getInitialState(){
+    //Initializing the initial state for the app, loading the content.json
+
+    getInitialState(){
 
 
             return {
@@ -32,19 +33,12 @@ export const App = createClass({
 
         render(){
 
-            console.log('calling render function');
-
             //variables to handle the routing to be sent to the URL
-            var firstPage = 0;
-            var currentPage = parseInt(this.props.params.index, 10);
-            var nextPage = (parseInt(this.props.params.index, 10) + 1);
-            var previousPage = (parseInt(this.props.params.index, 10) - 1);
-            var lastPage = parseInt(this.state.content["content"].length, 10) - 1;
-
-            console.log(" NextPage: " + nextPage +
-                    " FirstPage: " + firstPage +
-                    " LastPage: " + lastPage +
-                    " CurrentPage: " + currentPage)
+            let firstPage = 0,
+                currentPage = parseInt(this.props.params.index, 10),
+                nextPage = (parseInt(this.props.params.index, 10) + 1),
+                previousPage = (parseInt(this.props.params.index, 10) - 1),
+                lastPage = parseInt(this.state.content["content"].length, 10) - 1;
 
 
             return (
@@ -52,29 +46,29 @@ export const App = createClass({
                     <div className="app">
 
                         {/*
-                         **
-                         External library used to collapse and expand the content, couldn't sort out
-                         some states details to make it working on my own way
-                         **
+                         *
+                         *  External library used to collapse and expand the content, couldn't sort out
+                         *  some states details to make it working on my own way
+                         *
                          */}
                         <Collapsible openedClassName="header"
                                      className="header"
                                      trigger={<HeaderComponent />}
                                      open={true}>
                             {/*
-                             **
-                             Content component where all the content is being rendered and handled
-                             passing just to the index from the url's query parameters and the content.json
-                             **
+                             *
+                             * Content component where all the content is being rendered and handled
+                             * passing just to the index from the url's query parameters and the content.json
+                             *
                              */}
                             <ContentComponent content={this.state.content}
                                               index={this.props.params.index}/>
 
 
                             {/*
-                             **
-                             Footer with the navigation controller where the URL is being updated.
-                             **
+                             *
+                             * Footer with the navigation controller where the URL is being updated.
+                             *
                              */}
                             <nav className="navigation">
 
@@ -88,7 +82,10 @@ export const App = createClass({
                                 <div className="arrow-right">
                                     <Link to={`${ currentPage < lastPage ? nextPage : firstPage }`}>
                                 <span className="next-title">
-                                    {this.state.content["content"][nextPage > lastPage ? firstPage : nextPage]["title"]}
+                                    {
+                                        this.state
+                                            .content["content"][nextPage > lastPage ? firstPage : nextPage]["title"]
+                                    }
                                 </span>
                                         <span className="next-link">
                                     Next

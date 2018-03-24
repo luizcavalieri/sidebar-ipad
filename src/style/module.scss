@@ -54,6 +54,35 @@
 
 }
 
+//Arrow Collapsing
+.Collapsible__trigger{
+
+  &.is-open{
+    .icon-arrow{
+      svg{
+        transition: all .35s;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+    }
+  }
+
+  &.is-closed{
+
+    .icon-arrow{
+      svg{
+        transition: all .35s;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+      }
+
+    }
+
+  }
+}
+
+
 //CONTENT BOX
 div.content{
   overflow: auto;
